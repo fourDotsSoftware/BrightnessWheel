@@ -1,0 +1,7 @@
+C:\code\System Utilities\BrightnessWheel\BrightnessWheelGet\bin\Debug\BrightnessWheelGet.exe
+C:\code\System Utilities\BrightnessWheel\BrightnessWheelGet\bin\Debug\BrightnessWheelGet.pdb
+C:\code\System Utilities\BrightnessWheel\BrightnessWheelGet\obj\Debug\BrightnessWheelGet.csprojAssemblyReference.cache
+C:\code\System Utilities\BrightnessWheel\BrightnessWheelGet\obj\Debug\BrightnessWheelGet.csproj.CoreCompileInputs.cache
+C:\code\System Utilities\BrightnessWheel\BrightnessWheelGet\obj\Debug\BrightnessWheelGet.exe
+C:\code\System Utilities\BrightnessWheel\BrightnessWheelGet\obj\Debug\BrightnessWheelGet.pdb
+C:\code\System Utilities\BrightnessWheel\BrightnessWheelGet\bin\Debug\BrightnessWheelGet.exe.config

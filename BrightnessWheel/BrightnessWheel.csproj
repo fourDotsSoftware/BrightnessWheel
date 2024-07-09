@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{78026F62-7A9C-4A9B-92D6-596C1ABE4943}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BrightnessWheel</RootNamespace>
+    <AssemblyName>BrightnessWheel</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>brightness-wheel-48.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="com.softpcapps.download-software">
+      <HintPath>..\..\..\com.softpcapps\com.softpcapps.download-software\com.softpcapps.download-software\bin\Debug\com.softpcapps.download-software.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.4.7.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.4.7.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArgsManager.cs" />
+    <Compile Include="BrightnessControllerGammaRamp.cs" />
+    <Compile Include="CPUUsageMeter.cs" />
+    <Compile Include="CustomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomForm.designer.cs">
+      <DependentUpon>CustomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Display.cs" />
+    <Compile Include="ExceptionHandlersHelper.cs" />
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDownloadUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDownloadUpdate.designer.cs">
+      <DependentUpon>frmDownloadUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmError.designer.cs">
+      <DependentUpon>frmError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLanguage.designer.cs">
+      <DependentUpon>frmLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageCheckbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageCheckbox.designer.cs">
+      <DependentUpon>frmMessageCheckbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOptions.Designer.cs">
+      <DependentUpon>frmOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProxySettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProxySettings.designer.cs">
+      <DependentUpon>frmProxySettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVoulme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVoulme.Designer.cs">
+      <DependentUpon>frmVoulme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalHook.cs" />
+    <Compile Include="HitTestValues.cs" />
+    <Compile Include="ImageComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KeyboardHook.cs" />
+    <Compile Include="Module.cs" />
+    <Compile Include="MonitorBrightness.cs" />
+    <Compile Include="MouseHook.cs" />
+    <Compile Include="NiceLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OptionEvaluator.cs" />
+    <Compile Include="PhysicalMonitorBrightnessController.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistryHelper2.cs" />
+    <Compile Include="ResFlags.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResFlags.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ResTranslate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResTranslate.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RunAtWndowsStartupManager.cs" />
+    <Compile Include="TranslateHelper.cs" />
+    <Compile Include="ucWheelOption.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucWheelOption.Designer.cs">
+      <DependentUpon>ucWheelOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucTextProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ucTextProgressBar.designer.cs">
+      <DependentUpon>ucTextProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateHelper.cs" />
+    <Compile Include="URLLinkLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BrightnessWheelProject.cs" />
+    <EmbeddedResource Include="CustomForm.resx">
+      <DependentUpon>CustomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDownloadUpdate.resx">
+      <DependentUpon>frmDownloadUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmError.resx">
+      <DependentUpon>frmError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLanguage.resx">
+      <DependentUpon>frmLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageCheckbox.resx">
+      <DependentUpon>frmMessageCheckbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOptions.resx">
+      <DependentUpon>frmOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProxySettings.resx">
+      <DependentUpon>frmProxySettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVoulme.resx">
+      <DependentUpon>frmVoulme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ResFlags.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResFlags.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResTranslate.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResTranslate.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucWheelOption.resx">
+      <DependentUpon>ucWheelOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucTextProgressBar.resx">
+      <DependentUpon>ucTextProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\voulme-wheel-48.ico" />
+    <Content Include="brightness-wheel-48.ico" />
+    <None Include="Resources\brightness-wheel-48.ico" />
+    <Content Include="voulme-wheel-48.ico" />
+    <None Include="Resources\paypal-donate.gif" />
+    <None Include="Resources\youtube-32.png" />
+    <None Include="Resources\warning.png" />
+    <None Include="Resources\twitter-32.jpg" />
+    <None Include="Resources\twitter-24.jpg" />
+    <None Include="Resources\preferences.png" />
+    <None Include="Resources\navigate_end.png" />
+    <None Include="Resources\navigate_beginning.png" />
+    <None Include="Resources\media_stop.png" />
+    <None Include="Resources\media_pause.png" />
+    <None Include="Resources\mail.png" />
+    <None Include="Resources\linkedin-24.jpg" />
+    <None Include="Resources\key1.png" />
+    <None Include="Resources\information.png" />
+    <None Include="Resources\import1.png" />
+    <None Include="Resources\help2.png" />
+    <None Include="Resources\googleplus-24.jpg" />
+    <None Include="Resources\folder1.png" />
+    <None Include="Resources\folder_add.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\flash1.png" />
+    <None Include="Resources\flash.png" />
+    <None Include="Resources\facebook-32.jpg" />
+    <None Include="Resources\facebook-24.jpg" />
+    <None Include="Resources\exit1.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\earth.png" />
+    <None Include="Resources\document_preferences.png" />
+    <None Include="Resources\disk_blue.png" />
+    <None Include="Resources\delete1.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\cut.png" />
+    <None Include="Resources\copy.png" />
+    <None Include="Resources\check.png" />
+    <None Include="Resources\cart-icon-b-24.png" />
+    <None Include="Resources\bullet_ball_glass_yellow.png" />
+    <None Include="Resources\bullet_ball_glass_red.png" />
+    <None Include="Resources\bullet_ball_glass_green.png" />
+    <None Include="Resources\bullet_ball_glass_blue_16.png" />
+    <None Include="Resources\bullet_ball_glass_blue.png" />
+    <None Include="Resources\brush4.png" />
+    <None Include="Resources\brush2.png" />
+    <None Include="Resources\arrow_up_green.png" />
+    <None Include="Resources\arrow_right_blue.png" />
+    <None Include="Resources\arrow_left_blue.png" />
+    <None Include="Resources\arrow_down_green.png" />
+    <None Include="Resources\add1.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\about.png" />
+    <None Include="Resources\4dots_logo_official.png" />
+    <None Include="Resources\brightness-wheel.ico" />
+    <None Include="Resources\flag_albania.png" />
+    <None Include="Resources\flag_belarus.png" />
+    <None Include="Resources\flag_bulgaria.png" />
+    <None Include="Resources\flag_china.png" />
+    <None Include="Resources\flag_croatia.png" />
+    <None Include="Resources\flag_czech_republic.png" />
+    <None Include="Resources\flag_denmark.png" />
+    <None Include="Resources\flag_estonia.png" />
+    <None Include="Resources\flag_finland.png" />
+    <None Include="Resources\flag_france.png" />
+    <None Include="Resources\flag_georgia.png" />
+    <None Include="Resources\flag_germany.png" />
+    <None Include="Resources\flag_great_britain.png" />
+    <None Include="Resources\flag_greece.png" />
+    <None Include="Resources\flag_hungary.png" />
+    <None Include="Resources\flag_iceland.png" />
+    <None Include="Resources\flag_india.png" />
+    <None Include="Resources\flag_indonesia.png" />
+    <None Include="Resources\flag_iran.png" />
+    <None Include="Resources\flag_ireland.png" />
+    <None Include="Resources\flag_israel.png" />
+    <None Include="Resources\flag_italy.png" />
+    <None Include="Resources\flag_japan.png" />
+    <None Include="Resources\flag_kenya.png" />
+    <None Include="Resources\flag_latvia.png" />
+    <None Include="Resources\flag_lithuania.png" />
+    <None Include="Resources\flag_netherlands.png" />
+    <None Include="Resources\flag_norway.png" />
+    <None Include="Resources\flag_pakistan.png" />
+    <None Include="Resources\flag_philippines.png" />
+    <None Include="Resources\flag_poland.png" />
+    <None Include="Resources\flag_portugal.png" />
+    <None Include="Resources\flag_romania.png" />
+    <None Include="Resources\flag_russia.png" />
+    <None Include="Resources\flag_saudi_arabia.png" />
+    <None Include="Resources\flag_serbia_montenegro.png" />
+    <None Include="Resources\flag_slovakia.png" />
+    <None Include="Resources\flag_slovenia.png" />
+    <None Include="Resources\flag_south_africa.png" />
+    <None Include="Resources\flag_south_korea.png" />
+    <None Include="Resources\flag_spain.png" />
+    <None Include="Resources\flag_sweden.png" />
+    <None Include="Resources\flag_taiwan.png" />
+    <None Include="Resources\flag_thailand.png" />
+    <None Include="Resources\flag_turkey.png" />
+    <None Include="Resources\flag_ukraine.png" />
+    <None Include="Resources\flag_vietnam.png" />
+    <None Include="Resources\refresh.png" />
+    <Content Include="brightness-wheel.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
